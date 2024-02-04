@@ -1,5 +1,5 @@
 import 'package:client_pro/core/reusable.dart';
-import 'package:client_pro/features/register_screen/presentation/widgets/bottomNavBarViews/reg_as_client.dart';
+import 'package:client_pro/features/register_screen/presentation/widgets/reg_as_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
