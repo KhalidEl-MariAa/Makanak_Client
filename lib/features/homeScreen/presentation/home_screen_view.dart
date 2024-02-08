@@ -1,7 +1,7 @@
 import 'package:client_pro/features/homeScreen/presentation/widgets/gridview_categories_view.dart';
 import 'package:client_pro/features/homeScreen/presentation/widgets/home_screen_appbar.dart';
 import 'package:client_pro/features/homeScreen/presentation/widgets/search_and_slider_view.dart';
-import 'package:client_pro/features/companiesOf_Category_Screen/presentation/view/companies_of_category_view.dart';
+import 'package:client_pro/features/companiesOf_Category_Screen/presentation/view/services_of_category_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
