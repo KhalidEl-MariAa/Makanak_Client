@@ -11,7 +11,7 @@ class ItemNameAndDescriptionAndPriceDetailsView extends StatelessWidget {
       child: Column(
         children: [
           Text('About Us ',style: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.bold),),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
                        Align(
                         alignment: Alignment.centerLeft,
                         child:  Text('Description :',style: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w700),)
