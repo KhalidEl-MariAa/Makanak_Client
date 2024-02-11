@@ -1,6 +1,5 @@
 import 'package:client_pro/core/reusable.dart';
 import 'package:client_pro/features/mainScreen/presentation/mainScreen.dart';
-import 'package:client_pro/features/register_screen/presentation/register.dart';
 import 'package:client_pro/features/register_screen/presentation/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -83,20 +82,7 @@ class _SignInAsClientState extends State<SignInAsClient> {
                    }
                   , child: const Text('Log In',style: TextStyle(color: Colors.white),))
                 ),
-                GestureDetector(
-                   onTap: () {
-                    if(globalKey.currentState!.validate()){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>const RegisterView(),));
-                    }
-                    
-                  },
-                  child: Text.rich(
-                    TextSpan(text: "Don't have an Account?..",
-                    children:[
-                      TextSpan(
-                        text: 'Sign Up',style: TextStyle(fontWeight:FontWeight.bold,color: Reusable.reuseColor))] )
-                  ),
-                )
+                
       
               ],
             ),

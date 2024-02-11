@@ -1,7 +1,6 @@
 import 'package:client_pro/core/reusable.dart';
 import 'package:client_pro/features/register_screen/presentation/widgets/addImage/add_Image_as_client.dart';
 import 'package:client_pro/features/register_screen/presentation/widgets/custom_text_field.dart';
-import 'package:client_pro/features/sign_in_screen/presentation/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -24,9 +23,10 @@ class _RegisterAsClientState extends State<RegisterAsClient> {
       child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const SizedBox(height: 20,),
                 Align(
                   alignment: FractionalOffset.topLeft,
-                  child: Text('Sign Up',style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.bold),)),
+                  child: Text('Sign Up',style: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.bold),)),
               const AddImageViewAsClient(),
               SizedBox(height: 20.sp,),
               CustomTextField(
@@ -104,18 +104,7 @@ class _RegisterAsClientState extends State<RegisterAsClient> {
                    child: const Text('Sign Up',style: TextStyle(color: Colors.white),))
                 ),
                 
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) =>const SignInVieww(),));
-                  },
-                  child: Text.rich(
-                    TextSpan(text: 'Have an Account?..',
-                    children:[
-                      TextSpan(
-                        text: 'Log In',style: TextStyle(fontWeight:FontWeight.bold,color: Reusable.reuseColor))] )
-                  ),
-                )
-      
+                
               ],
             ),
     );

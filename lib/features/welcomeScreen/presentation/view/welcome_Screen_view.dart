@@ -1,6 +1,7 @@
 
 import 'package:client_pro/core/reusable.dart';
-import 'package:client_pro/features/register_screen/presentation/register.dart';
+import 'package:client_pro/features/AuthneticationScreen/presentation/view/auth_screen.dart';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -67,7 +68,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           },
           done: ElevatedButton(
             onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterView(),));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const AuthScreen(),));
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Reusable.reuseColor,
