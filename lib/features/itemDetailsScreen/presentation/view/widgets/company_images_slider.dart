@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:client_pro/core/reusable.dart';
+import 'package:client_pro/features/saleDetailsScreen/presentation/view/sale_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class CompanyImagesSliderView extends StatelessWidget {
@@ -15,7 +16,13 @@ class CompanyImagesSliderView extends StatelessWidget {
           CachedNetworkImage(errorWidget: (context, url, error) => const Icon(Icons.error),
                     placeholder: (context, url) => CircularProgressIndicator(color: Reusable.reuseColor,),
                     imageUrl: 'https://logosmarcas.net/wp-content/uploads/2020/12/Rexona-Logo-2015-presente.jpg'),
-          Image.asset(imglist[0]),Image.asset(imglist[1]),Image.asset(imglist[2])],
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder:(context) => const SaleDetailsScreen(), ));           
+               },
+            child: Image.asset(imglist[0])),
+          Image.asset(imglist[1]),
+          Image.asset(imglist[2])],
         options: CarouselOptions(autoPlay: true,enlargeCenterPage: true,)
         // CarouselSlider(items: imglist.map((e) =>
         //  SizedBox(
