@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:client_pro/core/reusable.dart';
+import 'package:client_pro/features/saleDetailsScreen/presentation/view/widgets/sale_review.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -40,10 +41,13 @@ class SaleImageAndNameAndDescriptionAndPriceDetailsView extends StatelessWidget 
                         alignment: Alignment.centerLeft,
                         child: Text('Sale Reviews :',style: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w700))),
                         const SizedBox(height: 8,),
-                        Text(
-                        'Beauty',
-                        style:TextStyle(fontStyle: FontStyle.italic,fontSize: 15.sp) 
-                        ),
+                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                          Text('4.5',style:TextStyle(fontSize: 20.sp,fontWeight: FontWeight.w500),),
+                          const SizedBox(height: 5,),
+                          Icon(Icons.star,color: Colors.amber,size: 27.sp,)
+                        ],),
                         const SizedBox(height: 20,),
               // -------------------------------------------------------------------------------------------------------------------
                        Align(
@@ -54,8 +58,15 @@ class SaleImageAndNameAndDescriptionAndPriceDetailsView extends StatelessWidget 
                         '20 L.E',
                         style:TextStyle(fontStyle: FontStyle.italic,fontSize: 15.sp) 
                         ),
-                       const SizedBox(height: 60,),
+                       const SizedBox(height: 20,),
                //--------------------------------------------------------------------------------------------------------
+                   Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text('Give your Review :',style: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w700))),
+                        const SizedBox(height: 8,),
+                        const SaleRating(),
+                       const SizedBox(height: 60,),
+               //------------------------------------------------------------------------------------------------------------------
                       ElevatedButton(
                         style:ElevatedButton.styleFrom(
                           backgroundColor: Reusable.reuseColor
